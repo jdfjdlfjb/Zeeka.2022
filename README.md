@@ -117,7 +117,7 @@ sudo systemctl restart zeeka
  ```     
          
  
- ### View logs: 
+ ### View logs 
   ``` 
  zeeka_log
   ```         
