@@ -13,20 +13,20 @@ Zeeka will incorporate concepts previously used as privacy layer or L2 solutions
 
 At this point, it is possible to help the project in-house. There are 3 forms to fill out:
 
-# 1.Community member form (for
+## 1.Community member form (for
 
 
 moderators):https://docs.google.com/forms/d/e/1FAIpQLSdz129RVXCPLIipF2evu5HDblo5iXdVBtk-3RO6XzKYCAVGlQ/viewform
 
 
 
-# 2.Contributions
+## 2.Contributions
 
 
 form:https://docs.google.com/forms/d/e/1FAIpQLSewVt8hRnRcufFOLCm9E9tNSeQ9FgWBjmygyIScA6_c5H7NPg/viewform
 
 
-# 3.Testnet submission
+## 3.Testnet submission
 
 
 form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7Ut8E0m97-cmdgcQ/alreadyresponded
@@ -34,18 +34,18 @@ form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# 1. Server Preparation 
+## 1. Server Preparation 
 ```
 sudo apt update && sudo apt upgrade -y -->
 sudo apt install wget jq git libssl-dev cmake -y
 ```
 
-# 2.Install Rust
+## 2.Install Rust
 ```
 . <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/installers/rust.sh)
 ```
 
-# Очистка старої версії з сервера.
+## Очистка старої версії з сервера.
 ```
 systemctl stop zeekad zorod uzid
 systemctl disable zeekad zorod uzid
@@ -60,12 +60,12 @@ rm /etc/systemd/system/uzid.service
 systemctl daemon-reload
 ```
 
-# 3.Clone a repository with a node
+## 3.Clone a repository with a node
 ```
 git clone https://github.com/ziesha-network/bazuka
 ```
 
-# 4.Перейти в папку bazuka,компіляція і установка
+## 4.Перейти в папку bazuka,компіляція і установка
 ```
 cd bazuka
 git pull origin master
@@ -73,17 +73,17 @@ cargo update
 cargo install --path .
 ```
 
-# View software bazuka
+## View software bazuka
 ```
 /root/bazuka/target/release/bazuka -h
 ```
 
-# 5.Initialize a node
+## 5.Initialize a node
 ```
 bazuka init --listen 0.0.0.0:8765 --db ~/.bazuka --network groth --external ВАШ-iP:8765 --bootstrap 65.108.193.133:8765 --mnemonic "Сид фраза кратна 6 словам"
 ```
 
-# 6.Create a service file
+## 6.Create a service file
 ```
 sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
 [Unit]
@@ -102,27 +102,29 @@ WantedBy=multi-user.target
 EOF
 ```  
   
-# 7.Run the service
+## 7.Run the service
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable zeeka
 sudo systemctl restart zeeka
 ```
-Add a command to view the log of a node in the system as a variable
+### Add a command to view the log of a node in the system as a variable
  ``` 
 . <(wget -qO- https://raw.githubusercontent.com/AlexM-dev/Utils/main/commands/insert_variable.sh) -n zeeka_log -v "sudo journalctl -fn 100 -u zeeka" -a
  ```     
          
  
- View logs: zeeka_log
-         
+ ### View logs: 
+  ``` 
+ zeeka_log
+  ```         
          
 
 ![203043786-13920c84-4b91-44f5-829e-d87fdac7d60f](https://user-images.githubusercontent.com/112564909/203550974-5c04bdb8-723c-4fd3-8a29-888aaae3ad6a.png)
 
          
          
-Copy the data to a safe place!!!
+### Copy the data to a safe place!!!
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
          
