@@ -5,7 +5,7 @@ Active version incentive Tetnet run 21.11.22 !
 
 
 
-Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
+#Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
 
 Zeeka offers a new concept called Zero Contracts. Zero contracts are the equivalent of smart contracts in some major blockchain systems such as Ethereum. These contracts will be expressed as mathematical constraints instead of virtual machine byte codes, such as the Ethereum virtual machine.
 
@@ -13,20 +13,20 @@ Zeeka will incorporate concepts previously used as privacy layer or L2 solutions
 
 At this point, it is possible to help the project in-house. There are 3 forms to fill out:
 
-1.Community member form (for
+# 1.Community member form (for
 
 
 moderators):https://docs.google.com/forms/d/e/1FAIpQLSdz129RVXCPLIipF2evu5HDblo5iXdVBtk-3RO6XzKYCAVGlQ/viewform
 
 
 
-2.Contributions
+# 2.Contributions
 
 
 form:https://docs.google.com/forms/d/e/1FAIpQLSewVt8hRnRcufFOLCm9E9tNSeQ9FgWBjmygyIScA6_c5H7NPg/viewform
 
 
-3.Testnet submission
+# 3.Testnet submission
 
 
 form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7Ut8E0m97-cmdgcQ/alreadyresponded
@@ -34,13 +34,13 @@ form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-1. Server Preparation
+# 1. Server Preparation
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install wget jq git libssl-dev cmake -y
 
 
-2.Install Rust
+# 2.Install Rust
 
 . <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/installers/rust.sh)
 
@@ -60,12 +60,12 @@ rm /etc/systemd/system/uzid.service
 systemctl daemon-reload
 
 
-3.Clone a repository with a node
+# 3.Clone a repository with a node
 
 git clone https://github.com/ziesha-network/bazuka
 
 
-4.Перейти в папку bazuka,компиляция и установка
+# 4.Перейти в папку bazuka,компиляция и установка
 
 cd bazuka
 git pull origin master
@@ -77,12 +77,12 @@ View software bazuka
 /root/bazuka/target/release/bazuka -h
 
 
-5.Initialize a node
+# 5.Initialize a node
 
 bazuka init --listen 0.0.0.0:8765 --db ~/.bazuka --network groth --external ВАШ-iP:8765 --bootstrap 65.108.193.133:8765 --mnemonic "Сид фраза кратна 6 словам"
 
 
-6.Create a service file
+# 6.Create a service file
 
 sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
 [Unit]
@@ -101,7 +101,7 @@ WantedBy=multi-user.target
 EOF
   
   
-7.Run the service
+# 7.Run the service
   
 sudo systemctl daemon-reload
 sudo systemctl enable zeeka
@@ -112,9 +112,7 @@ Add a command to view the log of a node in the system as a variable
 . <(wget -qO- https://raw.githubusercontent.com/AlexM-dev/Utils/main/commands/insert_variable.sh) -n zeeka_log -v "sudo journalctl -fn 100 -u zeeka" -a
          
          
- View logs
- 
- zeeka_log
+ View logs: zeeka_log
          
          
 
