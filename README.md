@@ -36,9 +36,8 @@ form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7
 
 # 1. Server Preparation
 
-sudo apt update && sudo apt upgrade -y
-sudo apt install wget jq git libssl-dev cmake -y
-
+"sudo apt update && sudo apt upgrade -y -->
+sudo apt install wget jq git libssl-dev cmake -y"
 
 # 2.Install Rust
 
