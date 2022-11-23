@@ -73,7 +73,7 @@ cargo update
 cargo install --path .
 ```
 
-View software bazuka
+# View software bazuka
 ```
 /root/bazuka/target/release/bazuka -h
 ```
