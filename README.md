@@ -5,7 +5,7 @@
 
 
 
-## Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
+### Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
 
 Zeeka offers a new concept called Zero Contracts. Zero contracts are the equivalent of smart contracts in some major blockchain systems such as Ethereum. These contracts will be expressed as mathematical constraints instead of virtual machine byte codes, such as the Ethereum virtual machine.
 
