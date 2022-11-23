@@ -1,4 +1,5 @@
 Active version incentive Tetnet run 21.11.22 !
+
 ![192145552-6eed7477-d72a-4089-bf94-172f4deec8ff](https://user-images.githubusercontent.com/112564909/203548605-ddd8293a-a5c4-4ba5-871c-38c2c511f366.png)
 Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
 
