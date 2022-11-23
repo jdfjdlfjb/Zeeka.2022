@@ -1,11 +1,11 @@
-Active version incentive Tetnet run 21.11.22 !
+# Active version incentive Tetnet run 21.11.22 !
 
 
 ![192145552-6eed7477-d72a-4089-bf94-172f4deec8ff](https://user-images.githubusercontent.com/112564909/203549847-15445df2-931c-469e-9c53-5031f545ab4d.png)
 
 
 
-#Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
+# Zeeka (ℤ) is a cryptocurrency that aims to create a lightweight and scalable blockchain with extensive use of zero-knowledge proof technology.
 
 Zeeka offers a new concept called Zero Contracts. Zero contracts are the equivalent of smart contracts in some major blockchain systems such as Ethereum. These contracts will be expressed as mathematical constraints instead of virtual machine byte codes, such as the Ethereum virtual machine.
 
@@ -124,7 +124,7 @@ Copy the data to a safe place!!!
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
          
-Delete a node
+## Delete a node
                  
 systemctl stop  zeeka zoro uzi
 systemctl disable zeeka zoro uzi
@@ -135,7 +135,7 @@ rm -rf /root/uzi
 rm ~/.bazuka.yaml
          
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
-Update version
+## Update version
          
 rm ~/.bazuka.yaml
 sudo systemctl stop zeeka 
@@ -145,7 +145,7 @@ cargo install --path
          
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
          
-Useful commands:
+## Useful commands:
          
 bazuka deposit Deposit funds to a Zero-Contract
 bazuka help Prints this message or the help of the given subcommand(s)
