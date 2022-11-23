@@ -89,7 +89,6 @@ sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
 [Unit]
 Description=Zeeka node
 After=network.target
-```
 
 [Service]
 User=$USER
@@ -101,18 +100,18 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-  
+```  
   
 # 7.Run the service
-  
+```
 sudo systemctl daemon-reload
 sudo systemctl enable zeeka
 sudo systemctl restart zeeka
-  
+```
 Add a command to view the log of a node in the system as a variable
-  
+ ``` 
 . <(wget -qO- https://raw.githubusercontent.com/AlexM-dev/Utils/main/commands/insert_variable.sh) -n zeeka_log -v "sudo journalctl -fn 100 -u zeeka" -a
-         
+ ```     
          
  
  View logs: zeeka_log
