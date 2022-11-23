@@ -123,10 +123,11 @@ Add a command to view the log of a node in the system as a variable
          
          
 Copy the data to a safe place!!!
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
          
 Delete a node
-         
-         
+                 
 systemctl stop  zeeka zoro uzi
 systemctl disable zeeka zoro uzi
 rm -rf /root/bazuka
@@ -135,7 +136,7 @@ rm -rf /root/zoro
 rm -rf /root/uzi
 rm ~/.bazuka.yaml
          
-         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
 Update version
          
 rm ~/.bazuka.yaml
@@ -144,22 +145,15 @@ cd bazuka
 git pull origin master
 cargo install --path
          
-         
-Useful Commands
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
          
 Useful commands:
+         
 bazuka deposit Deposit funds to a Zero-Contract
-
 bazuka help Prints this message or the help of the given subcommand(s)
-
 bazuka init Initialize node/wallet
-
 bazuka node Run node
-
 bazuka rsend Send funds through a regular-transaction
-
 bazuka status Get status of a node
-
 bazuka withdraw Withdraw funds from a Zero-Contract
-
 bazuka zsend Send funds through a zero-transaction
