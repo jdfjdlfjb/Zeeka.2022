@@ -41,12 +41,12 @@ sudo apt install wget jq git libssl-dev cmake -y
 ```
 
 # 2.Install Rust
-
+```
 . <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/installers/rust.sh)
-
+```
 
 # Очистка старої версії з сервера.
-
+```
 systemctl stop zeekad zorod uzid
 systemctl disable zeekad zorod uzid
 rm -rf $HOME/.bazuka*
@@ -58,36 +58,38 @@ rm /etc/systemd/system/zeekad.service
 rm /etc/systemd/system/zorod.service 
 rm /etc/systemd/system/uzid.service
 systemctl daemon-reload
-
+```
 
 # 3.Clone a repository with a node
-
+```
 git clone https://github.com/ziesha-network/bazuka
-
+```
 
 # 4.Перейти в папку bazuka,компіляція і установка
-
+```
 cd bazuka
 git pull origin master
 cargo update
 cargo install --path .
+```
 
 View software bazuka
-
+```
 /root/bazuka/target/release/bazuka -h
-
+```
 
 # 5.Initialize a node
-
+```
 bazuka init --listen 0.0.0.0:8765 --db ~/.bazuka --network groth --external ВАШ-iP:8765 --bootstrap 65.108.193.133:8765 --mnemonic "Сид фраза кратна 6 словам"
-
+```
 
 # 6.Create a service file
-
+```
 sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
 [Unit]
 Description=Zeeka node
 After=network.target
+```
 
 [Service]
 User=$USER
@@ -126,7 +128,7 @@ Copy the data to a safe place!!!
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
          
 ## Видалити ноду
-                 
+   ```              
 systemctl stop  zeeka zoro uzi
 systemctl disable zeeka zoro uzi
 rm -rf /root/bazuka
@@ -134,20 +136,20 @@ rm -rf /root/.bazuka-debug
 rm -rf /root/zoro
 rm -rf /root/uzi
 rm ~/.bazuka.yaml
-         
+ ```       
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
 ## Оновити версію
-         
+  ```       
 rm ~/.bazuka.yaml
 sudo systemctl stop zeeka 
 cd bazuka
 git pull origin master
 cargo install --path
-         
+   ```      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
          
 ## Корисні команди:
-         
+```         
 bazuka deposit Deposit funds to a Zero-Contract
          
 bazuka help Prints this message or the help of the given subcommand(s)
@@ -163,3 +165,4 @@ bazuka status Get status of a node
 bazuka withdraw Withdraw funds from a Zero-Contract
          
 bazuka zsend Send funds through a zero-transaction
+```
