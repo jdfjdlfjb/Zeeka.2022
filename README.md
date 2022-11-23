@@ -45,7 +45,7 @@ sudo apt install wget jq git libssl-dev cmake -y
 . <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/installers/rust.sh)
 
 
-Очистим сервер от старой версии.
+# Очистка старої версії з сервера.
 
 systemctl stop zeekad zorod uzid
 systemctl disable zeekad zorod uzid
@@ -65,7 +65,7 @@ systemctl daemon-reload
 git clone https://github.com/ziesha-network/bazuka
 
 
-# 4.Перейти в папку bazuka,компиляция и установка
+# 4.Перейти в папку bazuka,компіляція і установка
 
 cd bazuka
 git pull origin master
@@ -112,6 +112,7 @@ Add a command to view the log of a node in the system as a variable
 . <(wget -qO- https://raw.githubusercontent.com/AlexM-dev/Utils/main/commands/insert_variable.sh) -n zeeka_log -v "sudo journalctl -fn 100 -u zeeka" -a
          
          
+ 
  View logs: zeeka_log
          
          
@@ -124,7 +125,7 @@ Copy the data to a safe place!!!
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
          
-## Delete a node
+## Видалити ноду
                  
 systemctl stop  zeeka zoro uzi
 systemctl disable zeeka zoro uzi
@@ -135,7 +136,7 @@ rm -rf /root/uzi
 rm ~/.bazuka.yaml
          
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
-## Update version
+## Оновити версію
          
 rm ~/.bazuka.yaml
 sudo systemctl stop zeeka 
@@ -145,13 +146,20 @@ cargo install --path
          
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------         
          
-## Useful commands:
+## Корисні команди:
          
 bazuka deposit Deposit funds to a Zero-Contract
+         
 bazuka help Prints this message or the help of the given subcommand(s)
+         
 bazuka init Initialize node/wallet
+         
 bazuka node Run node
+         
 bazuka rsend Send funds through a regular-transaction
+         
 bazuka status Get status of a node
+         
 bazuka withdraw Withdraw funds from a Zero-Contract
+         
 bazuka zsend Send funds through a zero-transaction
