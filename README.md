@@ -14,12 +14,21 @@ Zeeka will incorporate concepts previously used as privacy layer or L2 solutions
 At this point, it is possible to help the project in-house. There are 3 forms to fill out:
 
 1.Community member form (for
+
+
 moderators):https://docs.google.com/forms/d/e/1FAIpQLSdz129RVXCPLIipF2evu5HDblo5iXdVBtk-3RO6XzKYCAVGlQ/viewform
 
+
+
 2.Contributions
+
+
 form:https://docs.google.com/forms/d/e/1FAIpQLSewVt8hRnRcufFOLCm9E9tNSeQ9FgWBjmygyIScA6_c5H7NPg/viewform
 
+
 3.Testnet submission
+
+
 form:https://docs.google.com/forms/d/e/1FAIpQLSdZVJmcL5X83zDUdRIJxuWiSi8hvmocEM7Ut8E0m97-cmdgcQ/alreadyresponded
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -37,7 +46,6 @@ sudo apt install wget jq git libssl-dev cmake -y
 
 
 Очистим сервер от старой версии.
-
 
 systemctl stop zeekad zorod uzid
 systemctl disable zeekad zorod uzid
@@ -63,7 +71,6 @@ cd bazuka
 git pull origin master
 cargo update
 cargo install --path .
-
 
 View software bazuka
 
@@ -94,7 +101,7 @@ WantedBy=multi-user.target
 EOF
   
   
-  7.Run the service
+7.Run the service
   
 sudo systemctl daemon-reload
 sudo systemctl enable zeeka
@@ -117,10 +124,10 @@ Add a command to view the log of a node in the system as a variable
          
 Copy the data to a safe place!!!
          
-         Delete a node
+Delete a node
          
          
-         systemctl stop  zeeka zoro uzi
+systemctl stop  zeeka zoro uzi
 systemctl disable zeeka zoro uzi
 rm -rf /root/bazuka
 rm -rf /root/.bazuka-debug
@@ -129,18 +136,18 @@ rm -rf /root/uzi
 rm ~/.bazuka.yaml
          
          
-         Update version
+Update version
          
- rm ~/.bazuka.yaml
+rm ~/.bazuka.yaml
 sudo systemctl stop zeeka 
 cd bazuka
 git pull origin master
 cargo install --path
          
          
-         Useful Commands
+Useful Commands
          
-         Useful commands:
+Useful commands:
 bazuka deposit Deposit funds to a Zero-Contract
 
 bazuka help Prints this message or the help of the given subcommand(s)
